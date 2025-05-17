@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ subject }} Materials</title>
+</head>
+<body>
+  <h1>Study Materials for {{ subject }}</h1>
+  <ul>
+    <li><a href="{{ url_for('static', filename='uploads/' + subject + '_notes.pdf') }}">Download Notes</a></li>
+    <li><a href="{{ url_for('static', filename='uploads/' + subject + '_pyqs.pdf') }}">Download Previous Year Papers</a></li>
+  </ul>
+</body>
+</html>
