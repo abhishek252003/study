@@ -1,14 +1,218 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
 body {
-  font-family: sans-serif;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-h1 {
-  color: #333;
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
 }
-a {
-  text-decoration: none;
-  color: royalblue;
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-ul {
-  list-style-type: none;
+
+.logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+.navbar-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Hamburger Icon (Mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Search Section */
+.search {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Courses Section */
+.courses {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.course-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-link {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.course-link:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* ==========================
+   Responsive Styles (Mobile)
+========================== */
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: none; /* Hide links by default */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hamburger Icon (Right side) */
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    /* Show navbar when clicked */
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Search Section */
+    #search-bar {
+        width: 80%;
+    }
+
+    /* Courses Section */
+    .course-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .course-link {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* Search Section */
+    #search-bar {
+        width: 90%;
+    }
+
+    /* Courses Section */
+    .course-link {
+        padding: 10px 0;
+    }
 }

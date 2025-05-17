@@ -11,10 +11,74 @@ def index():
 def subjects(year):
     # Static subjects for demo
     subjects_by_year = {
-        1: ['Maths', 'Physics', 'Chemistry'],
-        2: ['Data Structures', 'DBMS', 'OOP'],
-        3: ['CN', 'OS', 'DAA'],
-        4: ['AI', 'ML', 'IoT']
+        1: [
+    'Mathematics-I',
+    'Mathematics-II',
+    'Engineering Physics',
+     'Data Structures / Python Programming',
+    'Engineering Chemistry',
+    'Basic Electrical Engineering',
+    'Basic Electronics Engineering',
+    'Engineering Mechanics',
+    'Engineering Graphics',
+    'Programming for Problem Solving',
+    'Environmental Science',
+    'Workshop Practice',
+    'Communication Skills'
+],
+        2:  [
+    'Mathematics-III',
+    'Data Structures',
+    'Digital Electronics',
+    'Computer Organization and Architecture',
+    'Object-Oriented Programming (OOP)',
+    'Discrete Mathematics',
+    'Data Structures Lab',
+    'Digital Electronics Lab',
+    'Operating Systems',
+    'Database Management Systems (DBMS)',
+    'Design and Analysis of Algorithms (DAA)',
+    'Software Engineering',
+    'Microprocessors and Microcontrollers',
+    'Environmental Engineering / Professional Ethics',
+    'DBMS Lab',
+    'Operating Systems Lab'
+],
+        3: [
+    'Compiler Design',
+    'Computer Networks',
+    'Theory of Computation (Automata)',
+    'Web Technologies',
+    'Artificial Intelligence',
+    'Software Project Management',
+    'Computer Networks Lab',
+    'Web Technologies Lab',
+    'Machine Learning',
+    'Cloud Computing',
+    'Information Security / Cybersecurity',
+    'Open Elective - I',
+    'Open Elective - II',
+    'Mini Project',
+    'Industrial Training / Internship',
+    'Machine Learning Lab'
+],
+        4:  [
+    'Big Data Analytics',
+    'Cloud Computing',
+    'Information Security / Cybersecurity',
+    'Blockchain Technology',
+    'Mobile Application Development',
+    'Data Mining',
+    'Deep Learning',
+    'Software Project Management',
+    'Seminar / Technical Paper Presentation',
+    'Project Phase I (Minor Project)',
+    'Project Phase II (Major Project)',
+    'Industrial Internship / Training',
+    'Open Elective - III',
+    'Professional Elective - I',
+    'Professional Elective - II'
+],
     }
     subjects = subjects_by_year.get(year, [])
     return render_template('subjects.html', year=year, subjects=subjects)

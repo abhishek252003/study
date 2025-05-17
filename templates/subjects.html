@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Subjects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects for {{ year }} Year</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Subjects for {{ year }} Year</h1>
-  <ul>
-    {% for subject in subjects %}
-      <li><a href="/subject/{{ subject }}">{{ subject }}</a></li>
-    {% endfor %}
-  </ul>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-8">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-extrabold leading-tight">Subjects for {{ year }} Year</h1>
+            <p class="text-lg mt-4">Explore the study materials for each subject below.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for subject in subjects %}
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">{{ subject }}</h3>
+                        <p class="text-gray-600 mb-6">Click to access the study materials and previous year question papers for this subject.</p>
+                        <a href="/subject/{{ subject }}" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg inline-block text-center transform hover:scale-105 transition-all">
+                            View Materials
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4 mt-12 text-center">
+        <p>&copy; {{ year }} Study Materials Platform. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
