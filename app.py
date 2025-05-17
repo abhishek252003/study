@@ -24,7 +24,5 @@ def materials(subject):
     return render_template('materials.html', subject=subject)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
     port = int(os.environ.get('PORT', 5000))  # Use PORT env variable if available
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=True)
