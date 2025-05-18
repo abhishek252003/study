@@ -6,6 +6,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/cisco')
+def cisco():
+    return render_template('cisco.html')
 
 @app.route('/year/<int:year>')
 def subjects(year):
