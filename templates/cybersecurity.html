@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Security Subjects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white text-center py-10">
+    <h1 class="text-4xl font-bold">Cyber Security Portal</h1>
+    <p class="text-lg mt-2">Explore foundational topics in cyber security</p>
+  </header>
+
+  <!-- Subjects Section -->
+  <section class="py-16 px-6">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+      <!-- Information & Data Security -->
+      <a href="{{ url_for('info_data_security') }}"
+         class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl border hover:scale-105 transition transform duration-300">
+        <h2 class="text-2xl font-bold text-red-600 mb-2">Information & Data Security</h2>
+        <p class="text-gray-700 mb-4">Learn how to protect digital assets, encryption, privacy, and secure data handling.</p>
+        <span class="inline-block bg-red-600 text-white py-2 px-4 rounded-full text-sm font-semibold">View Resources</span>
+      </a>
+
+      <!-- Network Security -->
+      <a href="{{ url_for('network_security') }}"
+         class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl border hover:scale-105 transition transform duration-300">
+        <h2 class="text-2xl font-bold text-red-600 mb-2">Network Security</h2>
+        <p class="text-gray-700 mb-4">Understand firewalls, IDS/IPS, secure networking protocols, and threat mitigation.</p>
+        <span class="inline-block bg-red-600 text-white py-2 px-4 rounded-full text-sm font-semibold">View Resources</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-600 text-white text-center py-4 mt-12">
+    <p>&copy; 2025 Notes Portal. All rights reserved.</p>
+  </footer>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4YCH8MRJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H4YCH8MRJ9');
+  </script>
+
+</body>
+</html>

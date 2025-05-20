@@ -10,6 +10,21 @@ def index():
 def cisco():
     return render_template('cisco.html')
 
+@app.route("/cybersecurity")
+def cybersecurity():
+    return render_template("cybersecurity.html")
+
+
+@app.route("/info-data-security")
+def info_data_security():
+    return render_template("info_data_security.html")
+
+@app.route('/network_security')
+def network_security():
+    return render_template('network_security.html')
+
+
+
 @app.route('/year/<int:year>')
 def subjects(year):
     # Static subjects for demo
@@ -58,7 +73,7 @@ def subjects(year):
     'Web Technologies Lab',
     'Machine Learning',
     'Cloud Computing',
-    'Information Security / Cybersecurity',
+    'Information & Data Security / Cybersecurity',
     'Open Elective - I',
     'Open Elective - II',
     'Mini Project',
