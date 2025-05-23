@@ -9,6 +9,11 @@ def index():
 @app.route('/cisco')
 def cisco():
     return render_template('cisco.html')
+# cloud
+@app.route('/cloud')
+def cloud():
+    return render_template('cloud.html')
+
 
 @app.route("/cybersecurity")
 def cybersecurity():
